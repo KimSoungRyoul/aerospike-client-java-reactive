@@ -20,13 +20,6 @@
         <url>https://github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
     </scm>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
-        </repository>
-    </distributionManagement>
 
     <properties>
         <maven.deploy.skip>false</maven.deploy.skip>
