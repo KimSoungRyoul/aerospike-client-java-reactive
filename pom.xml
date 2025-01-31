@@ -7,7 +7,7 @@
     <name>aerospike-client-java-reactive</name>
     <description>aerospike-client-java-reactive</description>
     <url>https://github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
-    <version>9.0.2</version>
+    <version>9.0.2alpha</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -83,7 +83,7 @@
             <dependency>
                 <groupId>org.kimsoungryoul</groupId>
                 <artifactId>aerospike-reactor-client</artifactId>
-                <version>9.0.2</version>
+                <version>9.0.2alpha</version>
             </dependency>
 
             <dependency>
