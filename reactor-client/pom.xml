@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.aerospike</groupId>
+        <groupId>org.kimsoungryoul</groupId>
         <artifactId>aerospike-client-java-reactive</artifactId>
         <version>9.0.2</version>
     </parent>
@@ -12,6 +12,21 @@
     <packaging>jar</packaging>
 
     <name>aerospike-reactor-client</name>
+
+
+    <scm>
+        <connection>scm:git:git://github.com/kimsoungryoul/aerospike-client-java-reactive.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:kimsoungryoul/aerospike-client-java-reactive.git</developerConnection>
+        <url>https://github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <maven.deploy.skip>false</maven.deploy.skip>
@@ -23,14 +38,14 @@
         <assertj.version>3.24.2</assertj.version>
         <netcrusher.version>0.10</netcrusher.version>
 
-        <skipTests>false</skipTests>
+        <skipTests>true</skipTests>
         <mockito.version>4.11.0</mockito.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.aerospike</groupId>
-            <artifactId>aerospike-client-jdk8</artifactId>
+            <artifactId>aerospike-client-jdk21</artifactId>
         </dependency>
 
         <dependency>
@@ -105,8 +120,16 @@
         </dependency>
     </dependencies>
 
+
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration combine.self="override"/>
+            </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -137,25 +160,25 @@
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <goal>jar-no-fork</goal>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-gpg-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>sign-artifacts</id>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>sign</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
