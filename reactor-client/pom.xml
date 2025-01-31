@@ -9,7 +9,7 @@
         <version>9.0.2</version>
     </parent>
     <artifactId>aerospike-reactor-client</artifactId>
-    <packaging>jar</packaging>
+<!--    <packaging>jar</packaging>-->
 
     <name>aerospike-reactor-client</name>
 
