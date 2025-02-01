@@ -38,7 +38,7 @@ jobs:
           distribution: 'temurin'
           java-version: 21
           server-id: ossrh
-          server-username: ${{ secrets.OSSRH_USERNAME }}
+          server-username: kimsoungryoul
           server-password: ${{ secrets.OSSRH_TOKEN }}
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase:  ${{ secrets.GPG_PASSPHRASE }}
@@ -53,9 +53,9 @@ jobs:
 
       - name: Publish package
         run: mvn clean deploy -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -DskipTests
-        env:
-          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+#         env:
+#           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
 
 
 #
