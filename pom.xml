@@ -2,12 +2,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.kimsoungryoul</groupId>
-    <artifactId>aerospike-client-java-reactive</artifactId>
+    <groupId>io.github.kimsoungryoul</groupId>
+    <artifactId>aerospike-client-java-reactive-jdk21</artifactId>
     <name>aerospike-client-java-reactive</name>
     <description>aerospike-client-java-reactive</description>
     <url>https://github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
-    <version>9.0.2alpha</version>
+    <version>9.0.2</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -81,9 +81,9 @@
             </dependency>
 
             <dependency>
-                <groupId>org.kimsoungryoul</groupId>
-                <artifactId>aerospike-reactor-client</artifactId>
-                <version>9.0.2alpha</version>
+                <groupId>io.github.kimsoungryoul</groupId>
+                <artifactId>aerospike-reactor-client-jdk21</artifactId>
+                <version>9.0.2</version>
             </dependency>
 
             <dependency>
@@ -136,35 +136,36 @@
 
 
     <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
-        </repository>
-<!--        <snapshotRepository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
-<!--        </snapshotRepository>-->
+
 <!--        <repository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--            <id>github</id>-->
+<!--            <name>GitHub Packages</name>-->
+<!--            <url>https://maven.pkg.github.com/KimSoungRyoul/aerospike-client-java-reactive</url>-->
 <!--        </repository>-->
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <build>
         <pluginManagement>
             <plugins>
-<!--                <plugin>-->
-<!--                    <groupId>org.sonatype.plugins</groupId>-->
-<!--                    <artifactId>nexus-staging-maven-plugin</artifactId>-->
-<!--                    <version>${nexus-staging-maven-plugin.version}</version>-->
-<!--                    <extensions>true</extensions>-->
-<!--                    <configuration>-->
-<!--                        <serverId>ossrh</serverId>-->
-<!--                        <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
-<!--                        <autoReleaseAfterClose>false</autoReleaseAfterClose>-->
-<!--                    </configuration>-->
-<!--                </plugin>-->
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>${nexus-staging-maven-plugin.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <serverId>ossrh</serverId>
+                        <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                        <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                    </configuration>
+                </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
