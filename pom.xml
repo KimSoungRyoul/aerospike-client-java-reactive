@@ -8,7 +8,7 @@
     <description>aerospike-client-java-reactive-jdk21</description>
     <url>https://github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
     <version>9.0.2</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <modules>
         <module>reactor-client</module>
