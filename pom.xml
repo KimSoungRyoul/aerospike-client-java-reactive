@@ -215,6 +215,13 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <useAgent>false</useAgent>
+                    <gpgArguments>
+                        <arg>--pinentry-mode</arg>
+                        <arg>loopback</arg>
+                    </gpgArguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>
