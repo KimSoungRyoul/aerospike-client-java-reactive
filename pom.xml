@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.kimsoungryoul</groupId>
     <artifactId>aerospike-client-java-reactive-jdk21</artifactId>
-    <name>aerospike-client-java-reactive</name>
-    <description>aerospike-client-java-reactive</description>
+    <name>aerospike-client-java-reactive-jdk21</name>
+    <description>aerospike-client-java-reactive-jdk21</description>
     <url>https://github.com/KimSoungRyoul/aerospike-client-java-reactive</url>
     <version>9.0.2</version>
     <packaging>pom</packaging>
