@@ -53,9 +53,9 @@ jobs:
 
       - name: Publish package
         run: mvn clean deploy -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -DskipTests
-#         env:
-#           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-#           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+        env:
+          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
 
 
 #
