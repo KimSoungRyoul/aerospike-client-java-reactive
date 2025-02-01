@@ -48,6 +48,7 @@ jobs:
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
           echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
           gpgconf --kill gpg-agent
+
 #       - name: Publish package
 #         run: mvn --batch-mode -DskipTests deploy
 #         env:
@@ -57,7 +58,7 @@ jobs:
 
 
       - name: Publish package
-        run: mvn clean deploy -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -DskipTests
+        run: mvn clean deploy -P release -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -DskipTests
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
